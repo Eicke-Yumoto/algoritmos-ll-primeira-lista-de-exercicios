@@ -1,0 +1,23 @@
+//4. Faça um algoritmo que recebe dois valores representando as medidas da base e da
+//altura de um triângulo qualquer e exiba a área deste triângulo.
+
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+    
+    float base, alt, area;
+    
+    printf("Digite a base do seu triângulo(cm): ");
+    scanf("%f", &base);
+    
+    printf("Digite a altura do seu triângulo(cm): ");
+    scanf("%f", &alt);
+    
+    area = base * alt;
+    
+    printf("A área do seu triângulo é: %.2fcm", area);
+    
+    return 0;
+}
