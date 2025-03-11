@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+    
+    float num, metade;
+    
+    printf("Escreva um numero real: ");
+    scanf("%f", &num);
+    
+    metade = num * 2;
+    
+    printf("\nO dobro do seu número é %.2f", metade);
+    
+    return 0;
+}
