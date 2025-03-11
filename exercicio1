@@ -1,0 +1,20 @@
+// 1. Faça um algoritmo que solicita ao usuário um número real e exibe na tela a metade do
+// número digitado.
+
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+    
+    float num, metade;
+    
+    printf("Escreva um numero: ");
+    scanf("%f", &num);
+    
+    metade = num / 2;
+    
+    printf("%f", metade);
+    
+    return 0;
+}
