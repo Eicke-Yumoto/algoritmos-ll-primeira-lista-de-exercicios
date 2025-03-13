@@ -1,0 +1,29 @@
+//5. Faça um algoritmo que calcula os gastos com combustível em uma viagem. O
+//algoritmo deve solicitar ao usuário a distância a ser percorrida em Km, o consumo do
+//carro em Km/litro e o preço do litro do combustível. Como resposta o programa deverá
+//informar qual o valor em R$ a ser gasto com combustível na viagem.
+
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+    
+    float dist, consumo, fuelPrice, kmPrice, spent;
+    
+    printf("Escreva a distância percorrida(km): ");
+    scanf("%f", &dist);
+    
+    printf("Escreva o consumo do veiculo(km/litro): ");
+    scanf("%f", &consumo);
+    
+    printf("Escreva o valor do combustível(R$): ");
+    scanf("%f", &fuelPrice);
+    
+    kmPrice = dist / consumo;
+    spent = kmPrice * fuelPrice;
+    
+    printf("O valor total gasto é de R$%.2f", spent);
+    
+    return 0;
+}
