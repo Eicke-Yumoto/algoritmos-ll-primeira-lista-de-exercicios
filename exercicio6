@@ -1,0 +1,24 @@
+//6. Faça um algoritmo que solicite ao usuário o valor do salário do mesmo e a
+//porcentagem de aumento. Exiba o valor do aumento e o valor do salário acrescido do
+//aumento.
+
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+    
+    float salario, porcentagem, valorAumento;
+    
+    printf("Escreva o salário: ");
+    scanf("%f", &salario);
+    
+    printf("Escreva a porcentagem de aumento do salário: ");
+    scanf("%f", &porcentagem);
+    
+    valorAumento = salario * porcentagem / 100;
+    
+    printf("Valor do aumento: R$%.2f\nValor do salário acrescido do aumento: R$%.2f", valorAumento, salario + valorAumento);
+    
+    return 0;
+}
