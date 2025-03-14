@@ -1,0 +1,58 @@
+//7. Leia dois valores para as variáveis A e B, e efetue a troca dos valores de forma que a
+//variável A passe a ter o valor da variável B e que a variável B passe a ter o valor da
+//variável A. Ao final, exiba os resultados. Obs.: deverão ser feitos dois algoritmos: no
+//primeiro poderá ser usada uma terceira variável. No segundo somente as variáveis A e
+//B.
+
+//-----------------------------------------------METODO 1---------------------------------------------------------
+
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+
+    int a, b, x;
+    
+    printf("Escreva a variável A: ");
+    scanf("%d", &a);
+    
+    printf("Escreva a variável B: ");
+    scanf("%d", &b);
+    
+    x = a;
+    a = b;
+    b = x;
+    
+    printf("Valores trocados com sucesso!\nA = %d\nB = %d", a, b);
+
+    return 0;
+}
+
+//-----------------------------------------------METODO 2---------------------------------------------------------
+
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+    
+    //metodo 1
+    
+    int a, b;
+    
+    printf("Escreva a variável A: ");
+    scanf("%d", &a);
+    
+    printf("Escreva a variável B: ");
+    scanf("%d", &b);
+    
+    a = a + b;
+    b = a - b;
+    a = a - b;
+    
+    
+    printf("Valores trocados com sucesso!\nA = %d\nB = %d", a, b);
+    
+    return 0;
+}
