@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <string.h>
+#include <string.h> //para usar o strcspn
 
 int main() {
     char option, frase[50];
@@ -19,11 +19,10 @@ int main() {
         
         printf("Frase codificada: %s", frase);
         
-        do {
-            printf("\n\nContinuar? S/N: ");
-            scanf("%c", &option);
-            getchar(); // exclui o '\n' do buffer.
-        } while ( option != 'S' && option != 's' && option != 'N' && option != 'n');
+        
+        printf("\n\nContinuar? S/N: ");
+        scanf("%c", &option);
+        getchar(); // exclui o '\n' do buffer.
         
         if(option == 'N' || option == 'n') {
             loop = 0;
@@ -31,7 +30,7 @@ int main() {
             break;
         }
         
-    } while(loop);
+    } while(option != 'S' && option != 's' && option != 'N' && option != 'n');
     
     return 0;
 }
