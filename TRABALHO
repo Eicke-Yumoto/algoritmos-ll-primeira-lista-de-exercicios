@@ -7,7 +7,7 @@ int main() {
     do {
         printf("Escreva a frase a ser codificada: ");
         fgets(frase, 50, stdin);
-        frase[strcspn(frase, "\n")] = 0;
+        frase[strcspn(frase, "\n")] = 0; // exclui o '\n' incluido automaticamente pelo fgets.
 
         for(int i = 0; i < 50; i++) {
             if (frase[i] == '\0') {
@@ -22,7 +22,7 @@ int main() {
         do {
             printf("\n\nContinuar? S/N: ");
             scanf("%c", &option);
-            getchar();
+            getchar(); // exclui o '\n' do buffer.
         } while ( option != 'S' && option != 's' && option != 'N' && option != 'n');
         
         if(option == 'N' || option == 'n') {
